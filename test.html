@@ -1,0 +1,198 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PH Live Earthquake Reports</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Add this link to include FontAwesome CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <style>
+    /* Add custom styles here */
+    body {
+      padding-top: 0; /* Adjusted to accommodate the fixed Navbar height */
+    }
+  
+    /* Dark theme */
+    body.dark-mode {
+      background-color: #1a1a1a;
+      color: #ffffff;
+    }
+  
+    /* Light theme */
+    body.light-mode {
+      background-color: #ffffff;
+      color: #000000;
+    }
+  
+    /* Add styling for the dark mode switch */
+    .theme-toggle {
+      position: fixed;
+      top: 30;
+      right: 30px;
+      display: flex;
+      align-items: center;
+      color: #ffffff;
+    }
+  
+    .theme-toggle .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      -webkit-transition: .4s;
+      transition: .4s;
+    }
+  
+    .theme-toggle .slider:before {
+      position: absolute;
+      content: "";
+      height: 26px;
+      width: 26px;
+      left: 4px;
+      bottom: 4px;
+      background-color: #fff;
+      -webkit-transition: .4s;
+      transition: .4s;
+    }
+  
+    input:checked + .slider {
+      background-color: #2196F3;
+    }
+  
+    input:checked + .slider:before {
+      -webkit-transform: translateX(26px);
+      -ms-transform: translateX(26px);
+      transform: translateX(26px);
+    }
+  
+    .slider.round {
+      border-radius: 34px;
+    }
+  
+    .slider.round:before {
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body class="light-mode">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #001f3f;" fixed-top>
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="philippines-flag.png" alt="Philippine Flag" width="45" height="30" class="d-inline-block align-text-top">
+          Live Earthquake Reports
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#aboutUsModal">
+                <i class="fas fa-info-circle"></i> About Me
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#contactCityModal">
+                <i class="fas fa-phone"></i> Emergency Contact Information
+              </a>
+            </li>
+            <li class="navbar-brand" href="#">
+                <img src="philippines-flag.png" alt="Philippine Flag" width="45" height="30" class="d-inline-block align-text-top">
+                Live Earthquake Reports
+            </li>
+            <!-- Dark mode switch -->
+            <div class="theme-toggle">
+              <label class="switch">
+                <input type="checkbox" id="themeToggleBtn">
+                <span class="slider round"></span>
+              </label>
+              <i class="fas fa-moon"></i>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+  <!-- Modals for About Us and Contact Us -->
+  <!-- ... (existing modals) -->
+
+  <div class="container mt-5">
+    <h1 class="text-center mb-4">Philippines Live Earthquake Monitoring Reports</h1>
+
+    <!-- Added disclaimer paragraph with border -->
+    <div class="border p-3">
+      <p class="text-muted">
+        🌐 <strong>Disclaimer:</strong>
+        Our website utilizes earthquake monitoring data generously provided by the Philippine Institute of Volcanology and Seismology (PHIVOLCS-DOST). We extend our sincere appreciation to PHIVOLCS for their unwavering commitment to public safety. All earthquake-related information, including maps and alerts, is sourced directly from PHIVOLCS, and we credit them as the exclusive provider of these invaluable resources. Please note that any discrepancies or inaccuracies in the earthquake data are unintentional and the sole responsibility of PHIVOLCS. This website is not affiliated with PHIVOLCS, and users are encouraged to visit the official PHIVOLCS website (<a href="https://www.phivolcs.dost.gov.ph/" target="_blank" rel="noopener noreferrer">https://www.phivolcs.dost.gov.ph/</a>) for the most up-to-date and accurate information.
+      </p>
+    </div>
+
+    <div class="border p-3" style="text-align: center;">
+      <iframe id="earthquakeIframe" src="https://earthquake.phivolcs.dost.gov.ph/" width="100%" height="600" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS and Popper.js -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+  <!-- Your custom JavaScript -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Theme toggle button
+      const themeToggleBtn = document.getElementById('themeToggleBtn');
+      const body = document.body;
+
+      // Event listener for theme toggle
+      themeToggleBtn.addEventListener('change', function () {
+        if (this.checked) {
+          // Dark mode
+          body.classList.add('dark-mode');
+          body.classList.remove('light-mode');
+        } else {
+          // Light mode
+          body.classList.add('light-mode');
+          body.classList.remove('dark-mode');
+        }
+      });
+
+      // Function to refresh the iframe every 1 minute
+      function refreshIframe() {
+        const iframe = document.getElementById("earthquakeIframe");
+        iframe.src = iframe.src; // This reloads the iframe content
+
+        // Wait for a brief moment to allow the iframe to refresh
+        setTimeout(() => {
+          updateIframeWithMapLink();
+        }, 3000); // Adjust the delay based on your needs
+      }
+
+      function updateIframeWithMapLink() {
+        const mapLink = "https://earthquake.phivolcs.dost.gov.ph/2023_Earthquake_Information/December/2023_1203_1010_B1F.html";
+
+        // Log or display the map link
+        console.log(`Link to the map of the first row: ${mapLink}`);
+
+        // Update the iframe source with the map link
+        document.getElementById("earthquakeIframe").src = mapLink;
+      }
+
+      // Set interval for automatic refresh every 1 minute (60,000 milliseconds)
+      setInterval(refreshIframe, 15000);
+    });
+  </script>
+
+  <footer class="bg-dark text-white p-3 text-center">
+    <p>&copy; 2023 Live Earthquake Reports. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

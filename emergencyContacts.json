@@ -1,0 +1,104 @@
+{
+    "Surigao City": {
+      "EMERGENCY RESPONSE SERVICES": "09294209511",
+      "BUREAU OF FIRE PROTECTION": "09317218790 or 09552148510",
+      "SURIGAO CITY POLICE": "09985398568",
+      "CITY DISASTER RISK REDUCTION & MANAGEMENT OFFICE": "09515176419",
+      "PROVINCIAL DISASTER RISK REDUCTION & MANAGEMENT OFFICE": "09502507029 OR (086) 826-1293",
+      "COAST GUARD": {
+        "Coast Guard Station Surigao del Norte": "09518070127",
+        "Coast Guard Sub Station Lipata": "09664214813",
+        "Coast Guard Sub Station Malimono": "09352279557",
+        "Coast Guard Sub Station Placer": "09770043676",
+        "Coast Guard Sub Station Socorro": "09687704294",
+        "Coast Guard Sub Station Claver": "09855367399",
+        "Coast Guard Sub Station Pamosaingan": "09388108018",
+        "Coast Guard Mobile Team Taganaan": "0985-966-8420"
+      }
+    },
+    "Surigao del Sur": {
+      "SDS 1st PMFC": "0998-598-8250",
+      "SDS 2nd PMFC": "0907-533-8002",
+      "Carrascal MPS": "0939-917-3646",
+      "Cortes MPS": "0919-949-7841",
+      "Tandag CPS": "0998-598-7378",
+      "Tago MPS": "0930-965-9455",
+      "San Agustin MPS": "0998-598-7372",
+      "Lianga MPS": "0939-917-3599",
+      "Barobo MPS": "0939-917-3617",
+      "Cantilan MPS": "0939-902-3995",
+      "San Miguel MPS": "0939-902-3976",
+      "Tagbina MPS": "0939-902-3992",
+      "Madrid MPS": "0939-917-3673",
+      "Bayabas MPS": "0998-598-7358",
+      "Hinatuan MPS": "0998-598-7366",
+      "Carmen MPS": "0939-902-3974",
+      "Cagwait MPS": "0939-917-3672",
+      "Bislig CPS": "0998-598-7359",
+      "Lanuza MPS": "0939-917-3645",
+      "Marihatag MPS": "0939-902-3958",
+      "Lingig MPS": "0998-598-7369"
+    },
+    "Surigao del Norte": {
+      "MDRRMO Burgos": "0909-441-5209",
+      "MDRRMO Dapa": "0908-515-4983",
+      "MDRRMO Del Carmen": "0929-528-9409",
+      "MDRRMO Gen. Luna": "0907-940-4965",
+      "MDRRMO Pilar": "0949-880-4280",
+      "MDRRMO San Benito": "0910-660-7255",
+      "MDRRMO San Isidro": "0907-667-4312",
+      "MDRRMO Socorro": "0946-045-3777",
+      "MDRRMO Sta. Monica": "0938-155-9968",
+      "Mainland": {
+        "MDRRMO Alegria": "0920-320-8192",
+        "MDRRMO Bacuag": "0907-923-4379",
+        "MDRRMO Claver": "0947-746-9400",
+        "MDRRMO Gigaquil": "0910-858-5738",
+        "MDRRMO Mainit": "0948-735-7254",
+        "MDRRMO Malimono": "0930-013-7471",
+        "MDRRMO Placer": "0946-884-9248",
+        "MDRRMO San Francisco": "0907-399-5355",
+        "MDRRMO Sison": "0907-840-3651 / 0938-113-4535",
+        "MDRRMO Tagana-an": "0912-158-8093",
+        "MDRRMO Tubod": "0910-561-0260"
+      },
+      "Surigao City": {
+        "Emergency Operations Center (EOC)": "0951-517-6419"
+      },
+      "Caraga Region": {
+        "CDRRMO": "0929-420-9511",
+        "ERS I (Emergency Response System I)": "086-826-0249"
+      }
+    },
+    "Butuan City": {
+      "BUTUAN CDRRMO": {
+        "SMART": "0921 768 7287",
+        "GLOBE": "0956 133 3998",
+        "PLDT": "815 26 07"
+      },
+      "BFP BUTUAN": "0917 772 6300",
+      "BFP BUENAVISTA": "343 4772",
+      "BFP NASIPIT": "343 2496",
+      "BUTUAN CITY POLICE OFFICE": "0908 232 1536",
+      "BUTUAN CITY POLICE STATION 1": "0917 315 1068",
+      "BUTUAN CITY POLICE STATION 2": "0919 641 1020",
+      "BUTUAN CITY POLICE STATION 3": "0998 598 7297",
+      "BUTUAN CITY POLICE STATION 4": "0918 651 4097",
+      "BUTUAN CITY POLICE STATION 5": "0999 506 5769",
+      "IN CASE OF EMERGENCY": {
+        "BUTUAN CDRRMO": {
+          "Smart": "09217687287",
+          "Globe": "09561333998",
+          "PLDT": "815-26-07",
+          "Radio Frequency": "155.570 MHz"
+        },
+        "MDRRMO Buenavista": {
+          "Smart": "09208749506",
+          "Globe": "09665737090",
+          "Radio Frequency": "161.550 MHz"
+        },
+        "SAR BERNIDO 25-B": "0920 395 2828"
+      }
+    }
+  }
+  
