@@ -19,12 +19,13 @@
       background-color: #1a1a1a;
       color: #ffffff;
     }
-  
+
     /* Light theme */
     body.light-mode {
       background-color: #ffffff;
       color: #000000;
     }
+
   
     /* Add styling for the dark mode switch */
     .theme-toggle {
@@ -84,32 +85,33 @@
     
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #001f3f; /* Dark blue color */" fixed-top>
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-        <img src="philippines-flag.png" alt="Philippine Flag" width="45" height="30" class="d-inline-block align-text-top">
-        Live Earthquake Reports
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto"> <!-- Align items to the right -->
-          <li class="nav-item">
-            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#aboutUsModal">
-              <i class="fas fa-info-circle"></i> About Me
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#contactCityModal">
-              <i class="fas fa-phone"></i> Emergency Contact Information
-            </a>
-          </li>
-          <li class="navbar-brand" href="#">
-            <img src="refresh.png" alt="Philippine Flag" style="right: inherit;" width="30" height="30" class="d-inline-block align-text-top">
-             Website is automatically refresh every 15 seconds.
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #001f3f; /* Dark blue color */" fixed-top>
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="philippines-flag.png" alt="Philippine Flag" width="45" height="30" class="d-inline-block align-text-top">
+      Live Earthquake Reports
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto"> <!-- Align items to the right -->
+        <li class="nav-item">
+          <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#aboutUsModal">
+            <i class="fas fa-info-circle"></i> <span class="icon-text">Dev</span>
+          </a>
         </li>
-          <!-- Dark mode switch -->
+        <li class="nav-item">
+          <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#contactCityModal">
+            <i class="fas fa-phone"></i> <span class="icon-text">Emergency Contact Information</span>
+          </a>
+        </li>
+        <li class="nav-item feature-link">
+          <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#featureModal">
+            <i class="fas fa-star"></i> <span class="icon-text">Feature</span>
+          </a>
+        </li>                   
+        <!-- Dark mode switch -->
         <div class="theme-toggle">
           <label class="switch">
             <input type="checkbox" id="themeToggleBtn">
@@ -117,17 +119,18 @@
           </label>
           <i class="fas fa-moon"></i>
         </div>
-        </ul>
-      </div>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
+
 
 <!-- Modals for About Us and Contact Us -->
 <div class="modal fade" id="aboutUsModal" tabindex="-1" aria-labelledby="aboutUsModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="aboutUsModalLabel">About Us</h5>
+        <h5 class="modal-title" id="aboutUsModalLabel">Developer</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -153,7 +156,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="contactCityModalLabel">Select City</h5>
+        <h5 class="modal-title" id="contactCityModalLabel">Select Province or City:</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -184,8 +187,46 @@
   </div>
 </div>
 
+<!-- Modal for Feature -->
+<div class="modal fade" id="featureModal" tabindex="-1" aria-labelledby="featureModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="featureModalLabel">New Feature</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>
+          We are excited to introduce a new feature that enhances your experience on our website! <br><br>
+          
+          <strong>Here are the details:</strong><br>
+        </p>
+
+        <p>
+          <strong>Automatic Refresh:</strong><br>
+          The web app will now automatically refresh every 15 seconds. This means you'll receive the latest and most up-to-date earthquake monitoring reports without any manual intervention.
+        </p>
+
+        <p>
+          <strong>Integrated Emergency Contacts:</strong><br>
+          Emergency contact information is seamlessly integrated based on the selected City or Province. Now, you can easily access crucial contact details specific to your location, providing quick assistance during seismic events.
+        </p>
+
+        <p>
+          We believe these enhancements will contribute to a more convenient and informative experience for you. Your safety and well-being remain our top priority.
+        </p>
+        <!-- Add more content as needed -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <div class="container mt-5">
-  <h1 class="text-center mb-4">Philippines Live Earthquake Monitoring Reports</h1>
+  <h1 class="text-center mb-4">Philippine Live Earthquake Monitoring Reports</h1>
 
   <!-- Added disclaimer paragraph with border -->
   <div class="border p-3">
@@ -329,7 +370,7 @@
 </script>
 
   <footer class="bg-dark text-white p-3 text-center">
-    <p>&copy; 2023 Live Earthquake Reports. All rights reserved.</p>
+    <p>&copy; 2023 Philippine Live Earthquake Monitoring Reports. All rights reserved.</p>
   </footer>
 
 </body>
